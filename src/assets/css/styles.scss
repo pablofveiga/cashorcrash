@@ -1,0 +1,31 @@
+// ========= BASE ============================
+@import "base/_reset.scss";
+@import "base/_variables.scss";
+@import "base/_fonts.scss";
+
+// // ==== LAYOUT ====
+@import "layout/_layout.scss";
+
+
+// ==== COMPONENTES ====
+// @import "components/_mainMenu.scss";
+@import "components/_switcher.scss";
+// @import "components/_footer.scss";
+
+
+
+// ==== SECTIONS ====
+@import "sections/_header.scss";
+@import "sections/_mainSection.scss";
+@import "sections/_footer.scss";
+// @import "sections/_highlitedStrategies.scss";
+// @import "sections/_recommended.scss";
+// @import "sections/_monthlyPromos.scss";
+
+// // ==== VENDORS ====
+// @import "vendors/_lightgallery.scss";
+// @import "vendors/_jquery.bxslider.scss";
+// @import "vendors/_magnific-popup.scss";
+// @import "vendors/_slick-lightbox.scss";
+
+// @import "vendors/_slick-theme.scss";

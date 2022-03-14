@@ -1,0 +1,18 @@
+// VIEWPORTS
+$tabletVP: 768px;
+$desktopVP: 1024px;
+$largeVP: 1280px;
+$largeVP2: 1366px;
+
+body {
+	background: url(../pics/background05.png) center no-repeat transparent;
+}
+
+
+.wrapper {
+
+	@media (min-width: $largeVP2) {
+		width: 1200px;
+		margin: 0 auto;
+	}
+}
