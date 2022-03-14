@@ -1,0 +1,25 @@
+{
+  "name": "crashorcrash",
+  "version": "1.0.0",
+  "description": "test layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablofveiga/crashorcrash.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablofveiga/crashorcrash/issues"
+  },
+  "homepage": "https://github.com/pablofveiga/crashorcrash#readme",
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}
