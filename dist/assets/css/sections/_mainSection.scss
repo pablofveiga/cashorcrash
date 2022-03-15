@@ -1,0 +1,138 @@
+.homePage {
+	background: url(../pics/bigplanet.png) 0 0 no-repeat, url(../pics/background05.png) center no-repeat;
+
+	&__intro {
+	    padding: 80px 0 0;
+
+	    &__logo {
+	    	background: url(../pics/flyingship.png) top right/150px no-repeat transparent;
+
+	    	&__pic {
+    		    display: block;
+    			margin: 0 auto;
+    			max-width: 100%;
+	    	}
+	    }
+	    &__text {
+	    	margin: 50px auto 0;
+
+	    	p {
+	    		color: $gray03;
+				text-transform: uppercase;
+				font-size: 1.2em;
+				line-height: 1.5;
+				text-align: justify;
+	    	}
+	    }
+	}
+    &__games {
+
+    	&__buttons {
+    		margin: 70px auto 0;
+    		display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+
+			@media (min-width: $desktopVP) {
+			    flex-direction: row;
+			}
+    		&__cta {
+			    width: 80%;
+    			height: 70px;
+		        margin: 0 auto 1.75em;
+			    display: flex;
+			    justify-content: center;
+			    align-items: center;
+			    text-transform: uppercase;
+		        border-radius: 41px;
+    			box-shadow: 84px 134px 63px rgba(0, 0, 0, 0.01), 47px 76px 53px rgba(0, 0, 0, 0.05), 21px 34px 40px rgba(255, 194, 55, 0.10), 5px 8px 22px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.10);
+			    font-size: 1.35em;
+    			font-weight: bold;
+    			letter-spacing: 0.15px;
+    			transition: all 0.5s ease-in;
+
+				@media (min-width: $tabletVP) {
+				}
+				&:hover {
+					background-color: $yellow02;
+					color: #0a6680;
+					transition: all 0.5s ease-in;
+				}
+			    @media (min-width: $desktopVP) {
+				    width: 432px;
+				    height: 82px;
+				    margin: 0 20px;			    	
+			    }
+    			&--Play {
+    				background-color: $orange01;
+    				color: $white;
+    			}
+    			&--Multi {
+    				background-color: $gray04;
+    				color: $black01;
+    			}
+    		}
+    	}
+    }
+    &__bottomDecoration {
+		 background: url(../pics/antenna01.png) left top no-repeat, url(../pics/antenna02.png) right bottom no-repeat;
+		  background-size: contain;    	
+		  height: 160px;
+    }
+}
+
+.homeGames {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+    grid-gap: 0 8px;
+	margin: 70px auto 0;
+
+	&__item {
+	    display: inline-flex;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 14px;
+
+		@media (min-width: $tabletVP) {
+			width: 325px;
+			height: 486px;
+			padding: 0;
+		}
+	    &:hover {
+	    	img {
+	    		-webkit-animation: tiembla 1s infinite;
+	    		animation: tiembla 1s infinite;
+	    	}
+	    }
+		&__pic {
+			display: block;
+		    filter: drop-shadow(2px 4px 6px $black);
+		    max-width: 100%;
+		}
+		&--one {
+			background: url(../pics/planet03.png) 0 0/100% 100% fixed no-repeat #000;
+		}
+		&--two {
+			background: url(../pics/moon.png) 0 0/100% 100% fixed no-repeat #000;
+		}
+		&--three {
+			background: url(../pics/planet.png) 0 0/100% 100% fixed no-repeat #000;
+		}
+	}
+	@media (min-width: $tabletVP) {
+		display: flex;
+		justify-content: space-between;		
+	}
+}
+
+@-webkit-keyframes tiembla{
+  0%  { -webkit-transform:rotateZ(-5deg); }
+  50% { -webkit-transform:rotateZ( 0deg) scale(.8); }
+  100%{ -webkit-transform:rotateZ( 5deg); }
+}
+@keyframes tiembla{
+  0%  { -webkit-transform:rotateZ(-5deg); }
+  50% { -webkit-transform:rotateZ( 0deg) scale(.8); }
+  100%{ -webkit-transform:rotateZ( 5deg); }
+}

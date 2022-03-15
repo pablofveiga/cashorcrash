@@ -1,0 +1,21 @@
+// VIEWPORTS
+$tabletVP: 768px;
+$desktopVP: 1024px;
+$largeVP: 1280px;
+$largeVP2: 1366px;
+
+body {
+	&.blocked {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	padding: 0 8px;
+
+	@media (min-width: $largeVP2) {
+		width: 1200px;
+		margin: 0 auto;
+		padding: 0;
+	}
+}

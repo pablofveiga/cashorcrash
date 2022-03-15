@@ -1,0 +1,227 @@
+.header {
+
+	&__top {
+		background-color: $gray01;
+	    padding: 6px 0;
+	    position: relative;
+
+		&__wrapper {
+		    display: grid;
+    		grid-template-columns: 1fr;
+    		grid-template-rows: 50px auto;
+		    align-items: center;
+		    // flex-direction: column;
+
+			@media (min-width: $tabletVP ) {
+				display: flex;
+		    	align-items: center;
+			}
+		}
+		&__logo {
+			display: inline-flex;
+			margin: auto;
+			position: relative;
+			bottom: 5px;
+
+			@media (min-width: $tabletVP ) {
+				bottom: 0;
+				margin: 0;
+				display: block;
+			}
+		}
+		&__info {
+		    display: flex;
+	        align-items: center;
+    		margin-left: auto;
+		    margin-right: auto;
+
+    		&__currency {
+    			display: flex;
+    			align-items: center;
+
+    			&__oc {
+    				color: $gray02;
+				    font-size: 0.85em;
+
+    				&.active {
+    					color: $yellow01;
+    				}
+    			}
+    			&__switcher {
+
+    			}
+    		}
+    		&__buyCTA {
+    			border-left: 1px solid $gray02;
+    			border-right: 1px solid $gray02;
+				padding: 0 10px;
+				margin: 0 20px;
+
+    			&__btn {
+	    			background-color: $yellow01;
+				    width: 100px;
+				    height: 24px;
+				    display: flex;
+				    justify-content: center;
+				    align-items: center;
+				    border-radius: 16px;
+				    color: $black;
+				    font-weight: bold;
+				    transition: all 0.3s ease-in;
+
+				    &:hover {
+				    	background-color: $orange02;
+				    	color: $white;
+				    	transition: all 0.3s ease-in;
+				    }			
+    			}
+    		}
+    		&__personal {
+			    display: flex;
+			    align-items: center;
+			    position: absolute;
+			    top: 8px;
+			    right: 8px;
+
+    			&__profile {
+
+    				&__pic {
+    					display: block;
+    					width: 28px;
+    					border-radius: 50%;
+    					// border: 1px solid $gray02;
+    					box-shadow: 0 0 0px 3px $gray02;
+    				}
+    			}
+    			&__notification {
+					position: relative;
+					margin: 0 0 0 10px;
+
+    				&__pic {
+    					background-color: $gray02;
+					    display: inline-flex;
+					    width: 30px;
+					    height: 30px;
+					    justify-content: center;
+					    align-items: center;
+					    border-radius: 50%;
+    				}
+    				&__number {
+					    position: absolute;
+					    color: $white;
+					    font-family: monospace;
+					    top: -2px;
+					    right: -2px;
+					    font-size: 0.85em;
+					    background-color: $red;
+					    width: 12px;
+					    height: 12px;
+					    text-align: center;
+					    line-height: 12px;
+					    border-radius: 50%;
+    				}
+    			}
+				@media (min-width: $tabletVP ) {
+					position: relative;
+				    top: 0;
+    				right: 0;
+				}
+    		}
+			@media (min-width: $tabletVP ) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@at-root .mobileTrigger {
+		// display: block;
+		display: inline-flex;
+		width: 35px;
+		height: 30px;
+		background: url(../pics/mobiletriggerwhite.svg) center/contain no-repeat transparent;
+		position: absolute;
+		top: 12px;
+		cursor: pointer;
+
+		@media (min-width: $tabletVP ) {
+			display: none;	
+		}
+	}
+
+	&__nav {
+		background-color: $blue01;
+		height: 70px;
+		display: none;
+
+		&__wrapper {
+		    display: flex;
+    		height: 100%;
+		}
+		&__list {
+			display: flex;
+		    width: 100%;
+		    justify-content: center;
+		    align-items: center;
+
+			&__item {
+				margin: 0 20px;
+
+				&__link {
+					color: $white;
+					text-transform: uppercase;
+
+					&::before {
+						content: "";
+					    width: 10px;
+					    height: 10px;
+					    background-color: #e3e600;
+					    display: inline-flex;
+					    vertical-align: middle;
+					    border-radius: 50%;
+					    margin: 0 12px 5px 0;
+					}
+					&:hover {
+						color: $yellow02;
+					}
+				}
+			}
+			&.mobiled {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+				width: 90%;
+
+				li {
+					margin: 30px 20px 0;
+				}
+				&::before {
+				    content: "";
+				    background-color: rgba(0,0,0,0.64);
+				    width: 100vw;
+				    height: 100vh;
+				    position: absolute;
+				    z-index: -4;					
+				}
+			}
+		}
+		&.opened {
+			display: block;
+		}
+		@media (min-width: $tabletVP ) {
+			display: block;	
+		}
+		&.mobiled {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			left: 0;
+			top: 85px;
+			width: 90vw;
+			height: 100vh;
+			z-index: 100;
+		}
+	}
+	@media (min-width: $tabletVP ) {
+		display: block;
+	}
+}

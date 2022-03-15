@@ -1,0 +1,15 @@
+// ========= BASE ============================
+@import "base/_reset.scss";
+@import "base/_variables.scss";
+@import "base/_fonts.scss";
+
+// // ==== LAYOUT ====
+@import "layout/_layout.scss";
+
+// ==== COMPONENTES ====
+@import "components/_switcher.scss";
+
+// ==== SECTIONS ====
+@import "sections/_header.scss";
+@import "sections/_mainSection.scss";
+@import "sections/_footer.scss";
