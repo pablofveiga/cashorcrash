@@ -1,6 +1,5 @@
 .homePage {
 	background: url(../pics/bigplanet.png) 0 0 no-repeat, url(../pics/background05.png) center no-repeat;
-	// padding-bottom: 80px;
 
 	&__intro {
 	    padding: 80px 0 0;
@@ -8,15 +7,12 @@
 	    &__logo {
 	    	background: url(../pics/flyingship.png) top right/150px no-repeat transparent;
 
-
-
 	    	&__pic {
     		    display: block;
     			margin: 0 auto;
     			max-width: 100%;
 	    	}
 	    }
-
 	    &__text {
 	    	margin: 50px auto 0;
 
@@ -31,19 +27,15 @@
 	}
     &__games {
 
-
     	&__buttons {
     		margin: 70px auto 0;
     		display: flex;
 		    flex-direction: column;
 		    justify-content: center;
 
-
 			@media (min-width: $desktopVP) {
 			    flex-direction: row;
 			}
-
-
     		&__cta {
 			    width: 80%;
     			height: 70px;
@@ -60,23 +52,17 @@
     			transition: all 0.5s ease-in;
 
 				@media (min-width: $tabletVP) {
-				    // flex-direction: row;
 				}
-
 				&:hover {
 					background-color: $yellow02;
 					color: #0a6680;
 					transition: all 0.5s ease-in;
 				}
-
-
 			    @media (min-width: $desktopVP) {
 				    width: 432px;
 				    height: 82px;
 				    margin: 0 20px;			    	
 			    }
-
-
     			&--Play {
     				background-color: $orange01;
     				color: $white;
@@ -87,67 +73,43 @@
     			}
     		}
     	}
-
     }
-
     &__bottomDecoration {
 		 background: url(../pics/antenna01.png) left top no-repeat, url(../pics/antenna02.png) right bottom no-repeat;
 		  background-size: contain;    	
 		  height: 160px;
     }
-
-
-	@media (min-width: $tabletVP) {
-		// padding-bottom: 120px;	
-	}
-
 }
 
 .homeGames {
-	// display: flex;
-	// justify-content: space-between;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
     grid-gap: 0 8px;
 	margin: 70px auto 0;
 
-
 	&__item {
-		// width: 325px;
-		// height: 486px;
-
-		// TODO: Integrate with background in --one,--two,...
-	    // background-color: black;
 	    display: inline-flex;
 	    justify-content: center;
 	    align-items: center;
 	    padding: 14px;
-
-
 
 		@media (min-width: $tabletVP) {
 			width: 325px;
 			height: 486px;
 			padding: 0;
 		}
-
-
 	    &:hover {
 	    	img {
 	    		-webkit-animation: tiembla 1s infinite;
 	    		animation: tiembla 1s infinite;
 	    	}
 	    }
-
-
 		&__pic {
-			// max-width: 100%;
 			display: block;
 		    filter: drop-shadow(2px 4px 6px $black);
-		        max-width: 100%;
+		    max-width: 100%;
 		}
-
 		&--one {
 			background: url(../pics/planet03.png) 0 0/100% 100% fixed no-repeat #000;
 		}
@@ -158,7 +120,6 @@
 			background: url(../pics/planet.png) 0 0/100% 100% fixed no-repeat #000;
 		}
 	}
-
 	@media (min-width: $tabletVP) {
 		display: flex;
 		justify-content: space-between;		

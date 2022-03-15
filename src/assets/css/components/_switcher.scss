@@ -11,20 +11,16 @@
         height: 0;
 
         &:checked+span {
-            // background-color: $yellow01;
-
             &::before {
                 -webkit-transform: translateX(26px);
                 -ms-transform: translateX(26px);
                 transform: translateX(26px);                
             }
         }
-
         &:focus+span {
             box-shadow: 0 0 1px $yellow01;
         }
     }
-
     &__slider {
         position: absolute;
         cursor: pointer;
@@ -49,29 +45,5 @@
             -webkit-transition: .4s;
             transition: .4s;            
         }
-
     }
 }
-
-
-
-
-
-// input:focus+.slider {
-//     box-shadow: 0 0 1px $yellow01;
-// }
-
-// input:checked+.slider:before {
-//     -webkit-transform: translateX(26px);
-//     -ms-transform: translateX(26px);
-//     transform: translateX(26px);
-// }
-
-// /* Rounded sliders */
-// .slider.round {
-//     border-radius: 34px;
-// }
-
-// .slider.round:before {
-//     border-radius: 50%;
-// }

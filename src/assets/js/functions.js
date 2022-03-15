@@ -1,3 +1,4 @@
+// SWITCHER
 let checkbox = document.querySelector(".switcher__checkbox");
 checkbox.addEventListener('change', function() {
   if (this.checked) {
@@ -9,9 +10,6 @@ checkbox.addEventListener('change', function() {
   }
 });
 
-
-
-
 // MOBILE MENU 
 document.getElementById("mobileTrigger").addEventListener('click', function(e){   
 	e.stopPropagation();
@@ -21,16 +19,4 @@ document.getElementById("mobileTrigger").addEventListener('click', function(e){
 		document.querySelector(".header__nav__list").classList.toggle("mobiled");
 		document.querySelector("body").classList.toggle("blocked");
 	}
-
 });
-function closeMobileMenu(){
-	// $(".topMenu").toggleClass("mobiled");
-	// $(".mobileMenu").toggleClass("opened");	
-}
-document.addEventListener("click",function(e){
-	e.stopPropagation();
-	if (e.target == document.querySelector(".topMenu.mobiled")) {
-		// console.log("click en menu");
-		closeMobileMenu();
-	}
-})

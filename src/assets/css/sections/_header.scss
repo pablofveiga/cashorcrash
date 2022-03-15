@@ -1,6 +1,5 @@
 .header {
 
-
 	&__top {
 		background-color: $gray01;
 	    padding: 6px 0;
@@ -17,15 +16,12 @@
 				display: flex;
 		    	align-items: center;
 			}
-
 		}
-
 		&__logo {
 			display: inline-flex;
 			margin: auto;
 			position: relative;
 			bottom: 5px;
-
 
 			@media (min-width: $tabletVP ) {
 				bottom: 0;
@@ -33,7 +29,6 @@
 				display: block;
 			}
 		}
-
 		&__info {
 		    display: flex;
 	        align-items: center;
@@ -51,13 +46,11 @@
     				&.active {
     					color: $yellow01;
     				}
-
     			}
     			&__switcher {
 
     			}
     		}
-
     		&__buyCTA {
     			border-left: 1px solid $gray02;
     			border-right: 1px solid $gray02;
@@ -83,7 +76,6 @@
 				    }			
     			}
     		}
-
     		&__personal {
 			    display: flex;
 			    align-items: center;
@@ -101,7 +93,6 @@
     					box-shadow: 0 0 0px 3px $gray02;
     				}
     			}
-
     			&__notification {
 					position: relative;
 					margin: 0 0 0 10px;
@@ -115,7 +106,6 @@
 					    align-items: center;
 					    border-radius: 50%;
     				}
-
     				&__number {
 					    position: absolute;
 					    color: $white;
@@ -131,16 +121,12 @@
 					    border-radius: 50%;
     				}
     			}
-
 				@media (min-width: $tabletVP ) {
 					position: relative;
 				    top: 0;
     				right: 0;
 				}
-
     		}
-
-
 			@media (min-width: $tabletVP ) {
 				margin-right: 0;
 			}
@@ -160,8 +146,6 @@
 		@media (min-width: $tabletVP ) {
 			display: none;	
 		}
-
-
 	}
 
 	&__nav {
@@ -173,7 +157,6 @@
 		    display: flex;
     		height: 100%;
 		}
-
 		&__list {
 			display: flex;
 		    width: 100%;
@@ -197,14 +180,11 @@
 					    border-radius: 50%;
 					    margin: 0 12px 5px 0;
 					}
-
 					&:hover {
 						color: $yellow02;
 					}
 				}
 			}
-
-
 			&.mobiled {
 				flex-direction: column;
 				align-items: flex-start;
@@ -214,7 +194,6 @@
 				li {
 					margin: 30px 20px 0;
 				}
-
 				&::before {
 				    content: "";
 				    background-color: rgba(0,0,0,0.64);
@@ -225,14 +204,12 @@
 				}
 			}
 		}
-
 		&.opened {
 			display: block;
 		}
 		@media (min-width: $tabletVP ) {
 			display: block;	
 		}
-
 		&.mobiled {
 			display: flex;
 			flex-direction: column;
@@ -243,9 +220,7 @@
 			height: 100vh;
 			z-index: 100;
 		}
-
 	}
-
 	@media (min-width: $tabletVP ) {
 		display: block;
 	}

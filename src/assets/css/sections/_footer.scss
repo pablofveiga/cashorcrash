@@ -8,7 +8,6 @@
 	    display: flex;
 	    flex-direction: column;
 	}
-
 	&__links {
 	    padding-top: 40px;
 	    display: flex;
@@ -26,15 +25,12 @@
 		    	transition: all 0.2s ease-out;
 		    }
 	    }
-
 	}
-
 	&__social {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		margin: 40px auto 0;
-
 
 		&__item {
 			width: 40px;
@@ -47,7 +43,6 @@
 		    	filter: hue-rotate(121deg) sepia(0.58);
 		    	transition: all 0.4s ease-out;
 		    }
-
 			&--facebook {}
 			&--twitter {
 				background-position: -40px 0;
@@ -60,7 +55,6 @@
 			}
 		}
 	}
-
 	&__copyright {
 		margin: auto auto 20px;
 
@@ -69,5 +63,4 @@
 			font-size: 0.8em;
 		}
 	}
-
 }
