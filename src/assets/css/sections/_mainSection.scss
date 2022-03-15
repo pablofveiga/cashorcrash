@@ -1,17 +1,14 @@
 .homePage {
-	background: url(../pics/background05.png) center no-repeat transparent;
-	padding-bottom: 80px;
-	// background-image: url(../pics/background05.png), url(../pics/antenna01.png), url(../pics/antenna02.png);
-    // background-position: 0 0, left bottom,right bottom;
- //    background-repeat: no-repeat;
-    // background-size: cover, 200px, 200px;
-
- // background: url(../pics/background05.png) 0 0 no-repeat transparent, url(../pics/antenna01.png) bottom left no-repeat transparent, url(../pics/antenna02.png) bottom right no-repeat transparent;
+	background: url(../pics/bigplanet.png) 0 0 no-repeat, url(../pics/background05.png) center no-repeat;
+	// padding-bottom: 80px;
 
 	&__intro {
 	    padding: 80px 0 0;
 
 	    &__logo {
+	    	background: url(../pics/flyingship.png) top right/150px no-repeat transparent;
+
+
 
 	    	&__pic {
     		    display: block;
@@ -21,6 +18,7 @@
 	    }
 
 	    &__text {
+	    	margin: 50px auto 0;
 
 	    	p {
 	    		color: $gray03;
@@ -30,8 +28,6 @@
 				text-align: justify;
 	    	}
 	    }
-
-
 	}
     &__games {
 
@@ -43,31 +39,35 @@
 		    justify-content: center;
 
 
-			@media (min-width: $tabletVP) {
+			@media (min-width: $desktopVP) {
 			    flex-direction: row;
 			}
 
 
     		&__cta {
-			    // width: 432px;
-			    // height: 82px;
 			    width: 80%;
-    			height: 50px;
+    			height: 70px;
 		        margin: 0 auto 1.75em;
 			    display: flex;
 			    justify-content: center;
 			    align-items: center;
 			    text-transform: uppercase;
 		        border-radius: 41px;
-    			box-shadow: inset 0 0 4px 1px rgba(0, 0, 0, 0.46);
+    			box-shadow: 84px 134px 63px rgba(0, 0, 0, 0.01), 47px 76px 53px rgba(0, 0, 0, 0.05), 21px 34px 40px rgba(255, 194, 55, 0.10), 5px 8px 22px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.10);
 			    font-size: 1.35em;
     			font-weight: bold;
     			letter-spacing: 0.15px;
+    			transition: all 0.5s ease-in;
 
 				@media (min-width: $tabletVP) {
 				    // flex-direction: row;
 				}
 
+				&:hover {
+					background-color: $yellow02;
+					color: #0a6680;
+					transition: all 0.5s ease-in;
+				}
 
 
 			    @media (min-width: $desktopVP) {
@@ -89,8 +89,16 @@
     	}
 
     }
+
+    &__bottomDecoration {
+		 background: url(../pics/antenna01.png) left top no-repeat, url(../pics/antenna02.png) right bottom no-repeat;
+		  background-size: contain;    	
+		  height: 160px;
+    }
+
+
 	@media (min-width: $tabletVP) {
-		padding-bottom: 120px;	
+		// padding-bottom: 120px;	
 	}
 
 }

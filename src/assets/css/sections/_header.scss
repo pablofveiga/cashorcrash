@@ -73,7 +73,14 @@
 				    align-items: center;
 				    border-radius: 16px;
 				    color: $black;
-				    font-weight: bold;    				
+				    font-weight: bold;
+				    transition: all 0.3s ease-in;
+
+				    &:hover {
+				    	background-color: $orange02;
+				    	color: $white;
+				    	transition: all 0.3s ease-in;
+				    }			
     			}
     		}
 
@@ -179,6 +186,21 @@
 				&__link {
 					color: $white;
 					text-transform: uppercase;
+
+					&::before {
+						content: "";
+					    width: 10px;
+					    height: 10px;
+					    background-color: #e3e600;
+					    display: inline-flex;
+					    vertical-align: middle;
+					    border-radius: 50%;
+					    margin: 0 12px 5px 0;
+					}
+
+					&:hover {
+						color: $yellow02;
+					}
 				}
 			}
 

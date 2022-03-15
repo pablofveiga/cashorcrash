@@ -19,6 +19,12 @@
 		    margin: 0 20px;
 		    text-decoration: underline;
 		    font-size: 0.95em;
+		    transition: all 0.2s ease-out;
+
+		    &:hover {
+		    	color: $yellow02;
+		    	transition: all 0.2s ease-out;
+		    }
 	    }
 
 	}
@@ -35,6 +41,12 @@
 			height: 40px;
 			background-image: url(../pics/social_sprite.png);
 		    margin: 0 16px;
+		    transition: all 0.4s ease-out;
+
+		    &:hover {
+		    	filter: hue-rotate(121deg) sepia(0.58);
+		    	transition: all 0.4s ease-out;
+		    }
 
 			&--facebook {}
 			&--twitter {
