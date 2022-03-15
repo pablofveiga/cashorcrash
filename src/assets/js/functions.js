@@ -8,3 +8,29 @@ checkbox.addEventListener('change', function() {
     document.querySelector(".header__top__info__currency__oc:last-child").classList.toggle("active");
   }
 });
+
+
+
+
+// MOBILE MENU 
+document.getElementById("mobileTrigger").addEventListener('click', function(e){   
+	e.stopPropagation();
+
+	if (document.querySelector(".mobileTrigger").contains(e.target) ) {	
+		document.querySelector(".header__nav").classList.toggle("mobiled");
+		document.querySelector(".header__nav__list").classList.toggle("mobiled");
+		document.querySelector("body").classList.toggle("blocked");
+	}
+
+});
+function closeMobileMenu(){
+	// $(".topMenu").toggleClass("mobiled");
+	// $(".mobileMenu").toggleClass("opened");	
+}
+document.addEventListener("click",function(e){
+	e.stopPropagation();
+	if (e.target == document.querySelector(".topMenu.mobiled")) {
+		// console.log("click en menu");
+		closeMobileMenu();
+	}
+})

@@ -1,4 +1,12 @@
 .homePage {
+	background: url(../pics/background05.png) center no-repeat transparent;
+	padding-bottom: 80px;
+	// background-image: url(../pics/background05.png), url(../pics/antenna01.png), url(../pics/antenna02.png);
+    // background-position: 0 0, left bottom,right bottom;
+ //    background-repeat: no-repeat;
+    // background-size: cover, 200px, 200px;
+
+ // background: url(../pics/background05.png) 0 0 no-repeat transparent, url(../pics/antenna01.png) bottom left no-repeat transparent, url(../pics/antenna02.png) bottom right no-repeat transparent;
 
 	&__intro {
 	    padding: 80px 0 0;
@@ -8,6 +16,7 @@
 	    	&__pic {
     		    display: block;
     			margin: 0 auto;
+    			max-width: 100%;
 	    	}
 	    }
 
@@ -28,13 +37,23 @@
 
 
     	&__buttons {
-    		margin: 70px auto 120px;
+    		margin: 70px auto 0;
     		display: flex;
+		    flex-direction: column;
 		    justify-content: center;
 
+
+			@media (min-width: $tabletVP) {
+			    flex-direction: row;
+			}
+
+
     		&__cta {
-			    width: 432px;
-			    height: 82px;
+			    // width: 432px;
+			    // height: 82px;
+			    width: 80%;
+    			height: 50px;
+		        margin: 0 auto 1.75em;
 			    display: flex;
 			    justify-content: center;
 			    align-items: center;
@@ -44,6 +63,12 @@
 			    font-size: 1.35em;
     			font-weight: bold;
     			letter-spacing: 0.15px;
+
+				@media (min-width: $tabletVP) {
+				    // flex-direction: row;
+				}
+
+
 
 			    @media (min-width: $desktopVP) {
 				    width: 432px;
@@ -64,42 +89,81 @@
     	}
 
     }
-
+	@media (min-width: $tabletVP) {
+		padding-bottom: 120px;	
+	}
 
 }
 
 .homeGames {
-	display: flex;
-	justify-content: space-between;
+	// display: flex;
+	// justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+    grid-gap: 0 8px;
 	margin: 70px auto 0;
 
 
 	&__item {
-		width: 325px;
-		height: 486px;
+		// width: 325px;
+		// height: 486px;
 
 		// TODO: Integrate with background in --one,--two,...
-	    background-color: black;
-
-
+	    // background-color: black;
 	    display: inline-flex;
 	    justify-content: center;
 	    align-items: center;
+	    padding: 14px;
+
+
+
+		@media (min-width: $tabletVP) {
+			width: 325px;
+			height: 486px;
+			padding: 0;
+		}
+
+
+	    &:hover {
+	    	img {
+	    		-webkit-animation: tiembla 1s infinite;
+	    		animation: tiembla 1s infinite;
+	    	}
+	    }
 
 
 		&__pic {
 			// max-width: 100%;
 			display: block;
+		    filter: drop-shadow(2px 4px 6px $black);
+		        max-width: 100%;
 		}
 
 		&--one {
-			background: url(../pics/planet03.png) 0 0 no-repeat #000;
+			background: url(../pics/planet03.png) 0 0/100% 100% fixed no-repeat #000;
 		}
 		&--two {
-			background: url(../pics/moon.png) 0 0 no-repeat #000;
+			background: url(../pics/moon.png) 0 0/100% 100% fixed no-repeat #000;
 		}
 		&--three {
-			background: url(../pics/planet.png) 0 0 no-repeat #000;
+			background: url(../pics/planet.png) 0 0/100% 100% fixed no-repeat #000;
 		}
 	}
+
+	@media (min-width: $tabletVP) {
+		display: flex;
+		justify-content: space-between;		
+	}
+}
+
+@-webkit-keyframes tiembla{
+  0%  { -webkit-transform:rotateZ(-5deg); }
+  50% { -webkit-transform:rotateZ( 0deg) scale(.8); }
+  100%{ -webkit-transform:rotateZ( 5deg); }
+}
+@keyframes tiembla{
+  0%  { -webkit-transform:rotateZ(-5deg); }
+  50% { -webkit-transform:rotateZ( 0deg) scale(.8); }
+  100%{ -webkit-transform:rotateZ( 5deg); }
 }
